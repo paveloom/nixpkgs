@@ -19544,6 +19544,11 @@ with pkgs;
 
   ytt = callPackage ../development/tools/ytt { };
 
+  zigmod = callPackage ../development/tools/zigmod {
+    zig = zig_0_11;
+  };
+  buildZigmodPackage = callPackage ../development/tools/zigmod/buildZigmodPackage.nix { };
+
   zydis = callPackage ../development/libraries/zydis { };
 
   grabserial = callPackage ../development/tools/grabserial { };
