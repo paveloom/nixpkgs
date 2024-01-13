@@ -33,6 +33,10 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "mobi" ];
 
+  prePatch = ''
+    sed -i 's#loguru = ".*"#loguru = "*"#' pyproject.toml
+  '';
+
   meta = with lib; {
     description = "Library for unpacking unencrypted mobi files";
     mainProgram = "mobiunpack";
