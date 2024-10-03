@@ -19,6 +19,7 @@ python3Packages.buildPythonApplication rec {
 
   patches = [
     ./patches/ensure-the-default-config-file-is-writable.patch
+    ./patches/get-the-secret-after-setting-the-x-user-auth-token-header.patch
   ];
 
   nativeBuildInputs = with python3Packages; [
